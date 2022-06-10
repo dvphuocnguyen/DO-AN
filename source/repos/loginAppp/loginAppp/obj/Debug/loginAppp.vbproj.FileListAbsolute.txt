@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\loginAppp\loginAppp\bin\Debug\loginAppp.exe.config
+C:\Users\Admin\source\repos\loginAppp\loginAppp\bin\Debug\loginAppp.exe
+C:\Users\Admin\source\repos\loginAppp\loginAppp\bin\Debug\loginAppp.pdb
+C:\Users\Admin\source\repos\loginAppp\loginAppp\bin\Debug\loginAppp.xml
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.vbproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.Form1.resources
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.Resources.resources
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.vbproj.GenerateResource.cache
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.exe
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.xml
+C:\Users\Admin\source\repos\loginAppp\loginAppp\obj\Debug\loginAppp.pdb
