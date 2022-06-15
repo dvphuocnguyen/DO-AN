@@ -16,7 +16,7 @@ namespace LoginForm
         public Exam()
         {
             InitializeComponent();
-            multiRandom();
+            //multiRandom();
             FetchQuestion();
             timer1.Start();
         }
@@ -295,7 +295,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ2()
@@ -327,7 +327,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ3()
@@ -359,7 +359,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ4()
@@ -391,7 +391,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ5()
@@ -423,7 +423,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ6()
@@ -455,7 +455,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ7()
@@ -487,7 +487,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ8()
@@ -519,7 +519,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ9()
@@ -551,7 +551,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void checkQ10()
@@ -583,7 +583,7 @@ namespace LoginForm
             }
             else
             {
-                //Score = Score;
+                Score = Score;
             }
         }
         private void SubmitBtn_Click(object sender, EventArgs e)

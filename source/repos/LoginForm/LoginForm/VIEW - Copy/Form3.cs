@@ -43,6 +43,14 @@ namespace LoginForm
 
         }
 
-    
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

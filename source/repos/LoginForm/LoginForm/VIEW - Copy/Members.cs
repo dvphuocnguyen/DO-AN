@@ -16,6 +16,7 @@ namespace LoginForm
         public Members()
         {
             InitializeComponent();
+            DisplayMembers();   
         }
 
         private void Reset()

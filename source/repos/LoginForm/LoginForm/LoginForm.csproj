@@ -190,6 +190,12 @@
     <Compile Include="DTO\QLENG.cs" />
     <Compile Include="DTO\video.cs" />
     <Compile Include="DTO\videotrochoi.cs" />
+    <Compile Include="VIEW - Copy\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW - Copy\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW - Copy\Exam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </Compile>
     <EmbeddedResource Include="VIEW - Copy\Exam.resx">
       <DependentUpon>Exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW - Copy\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW - Copy\Levels.resx">
       <DependentUpon>Levels.cs</DependentUpon>

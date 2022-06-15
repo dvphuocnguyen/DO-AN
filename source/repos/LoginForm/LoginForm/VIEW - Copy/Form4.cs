@@ -18,7 +18,7 @@ namespace LoginForm
         public Form4()
         {
             InitializeComponent();
-            LoadData();
+           // LoadData();
             
         }
      

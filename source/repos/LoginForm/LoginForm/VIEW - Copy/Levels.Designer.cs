@@ -283,7 +283,7 @@
             // LvNameTb
             // 
             this.LvNameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.LvNameTb.DefaultText = "Question";
+            this.LvNameTb.DefaultText = "Levels";
             this.LvNameTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.LvNameTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.LvNameTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -293,6 +293,7 @@
             this.LvNameTb.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvNameTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LvNameTb.Location = new System.Drawing.Point(702, 157);
+            this.LvNameTb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.LvNameTb.Name = "LvNameTb";
             this.LvNameTb.PasswordChar = '\0';
             this.LvNameTb.PlaceholderForeColor = System.Drawing.Color.Blue;

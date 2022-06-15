@@ -150,3 +150,4 @@ C:\Users\TechCare\Desktop\DO-AN\source\repos\LoginForm\LoginForm\bin\Debug\Bunif
 C:\Users\TechCare\Desktop\DO-AN\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Members.resources
 C:\Users\TechCare\Desktop\DO-AN\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Levels.resources
 C:\Users\TechCare\Desktop\DO-AN\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Exam.resources
+C:\Users\TechCare\Desktop\DO-AN\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Form6.resources
