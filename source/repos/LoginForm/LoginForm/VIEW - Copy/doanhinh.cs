@@ -17,7 +17,7 @@ namespace LoginForm
         
         int index;
         int indexdadung = 0;
-        int diem;
+        //int diem;
         string[] listHinhAnh;
         int[] listindex;
         int timeremainder;
