@@ -16,6 +16,7 @@ namespace LoginForm
         public KhoaHoc()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void KhoaHoc_Load(object sender, EventArgs e)
@@ -54,9 +55,10 @@ namespace LoginForm
             {
                 foreach(DataGridViewRow row in dataGridView1.SelectedRows)
                 {
-                    BBLQL.Instance.deletekhoahoctrochoi(row.Cells["idkhoahoc"].ToString());
+                    BBLQL.Instance.deletekhoahoctrochoi(row.Cells["idkhoahoc"].Value.ToString());
                 }
             }
+            LoadData();
         }
     }
 }

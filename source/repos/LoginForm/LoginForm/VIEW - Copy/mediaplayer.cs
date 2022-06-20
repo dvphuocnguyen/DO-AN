@@ -14,11 +14,14 @@ namespace LoginForm
     public partial class mediaplayer : Form
     {
          private string resume;
-        
-        public mediaplayer()
+        public string idvideotrochoi;
+        trietree tree;
+        public mediaplayer(string id)
         {
             InitializeComponent();
             this.AllowDrop = true;
+            this.idvideotrochoi = id;
+            this.tree = new trietree(BBLQL.Instance.addParagraphGUI(idvideotrochoi));
             GUI();
         }
 
@@ -59,8 +62,11 @@ namespace LoginForm
 
         }
         private void GUI()
-        {
-            quizholeitem temp=BBLQL.Instance.quizhole("na no ma mi ne no xi ga me ta lo", 2);
+        {   
+            string text= BBLQL.Instance.addParagraphGUI(idvideotrochoi);
+            richTextBox1.Text = text;
+            var rand=new Random();
+            quizholeitem temp=BBLQL.Instance.quizhole(text, rand.Next(text.Length/20));
             Control[]list=new Control[temp.chuoi.Length];
             
             for (int i=0;i<temp.chuoi.Length;i++)
@@ -84,8 +90,8 @@ namespace LoginForm
                 }
             }
             groupBox1.Controls.AddRange(list);
-
-            richTextBox1.Text = "The middle sentences in a paragraph are called supporting. Supporting sentences give examples or other details about the topic.";
+           /* tabControl1.Controls.Add();*/
+            
            
         }
 
@@ -93,5 +99,40 @@ namespace LoginForm
         {
             Console.Write(richTextBox1.SelectedText);
         }
+
+       
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            reloadParagraph();
+            string paragraph = richTextBox1.Text;
+            string[] pars = textBox2.Text.Split(',');
+            foreach (string par in pars)
+            {
+                Console.WriteLine(par);
+                List<int> indexes = BBLQL.Instance.searchparagraph(paragraph, par,tree);
+               
+                if (indexes != null)
+                {
+                    foreach (int index in indexes)
+                    {
+                        
+                        richTextBox1.SelectionStart = index;
+                        richTextBox1.SelectionLength = par.Length;
+                        richTextBox1.SelectionBackColor = Color.Yellow;
+
+                    }
+                }
+                
+            }
+        }
+        private void reloadParagraph()
+        {
+            richTextBox1.SelectionStart = 0;
+            richTextBox1.SelectAll();
+            richTextBox1.SelectionBackColor= Color.White;
+        }
+
+       
     }
 }
