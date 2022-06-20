@@ -62,14 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BBL\BBLQL.cs" />
+    <Compile Include="Comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDB.cs" />
     <Compile Include="DTO\accountUser.cs" />
     <Compile Include="DTO\Answer.cs" />
     <Compile Include="DTO\audio.cs" />
-    <Compile Include="DTO\Avatar.cs" />
+    <Compile Include="DTO\CBBuser.cs" />
     <Compile Include="DTO\doanhinhDTO.cs" />
     <Compile Include="DTO\ImageDoanHinh.cs" />
     <Compile Include="DTO\quizholeitem.cs" />
+    <Compile Include="DTO\trienode.cs" />
+    <Compile Include="DTO\trietree.cs" />
     <Compile Include="DTO\tudientrochoi.cs" />
     <Compile Include="DTO\tudien.cs" />
     <Compile Include="DTO\thanhngutrochoi.cs" />
@@ -82,9 +90,23 @@
     <Compile Include="DTO\comment.cs" />
     <Compile Include="DTO\inforuser.cs" />
     <Compile Include="DTO\khoadahoc.cs" />
-    <Compile Include="DTO\QLENG.cs" />
     <Compile Include="DTO\video.cs" />
     <Compile Include="DTO\videotrochoi.cs" />
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206200106350_Initial.cs" />
+    <Compile Include="Migrations\202206200106350_Initial.designer.cs">
+      <DependentUpon>202206200106350_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206200119319_MigrationForRoleInEmp.cs" />
+    <Compile Include="Migrations\202206200119319_MigrationForRoleInEmp.designer.cs">
+      <DependentUpon>202206200119319_MigrationForRoleInEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VIEW - Copy\KhoaHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,7 +115,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QL.cs" />
     <Compile Include="QLENG.cs" />
     <Compile Include="textboxcustom.cs">
       <SubType>UserControl</SubType>
@@ -131,18 +152,24 @@
     <Compile Include="VIEW - Copy\Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW - Copy\Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VIEW - Copy\Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
-    </Compile>
     <Compile Include="VIEW - Copy\mediaplayer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIEW - Copy\mediaplayer.Designer.cs">
       <DependentUpon>mediaplayer.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206200106350_Initial.resx">
+      <DependentUpon>202206200106350_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206200119319_MigrationForRoleInEmp.resx">
+      <DependentUpon>202206200119319_MigrationForRoleInEmp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -170,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW - Copy\Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW - Copy\Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW - Copy\KhoaHoc.resx">
       <DependentUpon>KhoaHoc.cs</DependentUpon>

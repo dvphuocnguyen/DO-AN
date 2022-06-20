@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LoginForm.BBL;
+using LoginForm.DTO;
 namespace LoginForm
 {
     public partial class Form1 : Form
@@ -26,7 +27,7 @@ namespace LoginForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "Baole" && txtPassword.Text == "1234")
+            if(BBLQL.Instance.checkuser(txtUserName.Text,txtPassword.Text))
             {
                 Form3 f = new Form3();
                 this.Hide();
@@ -36,8 +37,8 @@ namespace LoginForm
             else
             {
                 MessageBox.Show("The Username or Password you entered is incorrect, try again", "Warning!");
-                txtUserName.Clear();
-                txtPassword.Clear();
+                txtUserName.Text="";
+                txtPassword.Text="";
                 txtUserName.Focus();
             }
         }

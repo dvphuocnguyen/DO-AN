@@ -49,6 +49,64 @@ namespace LoginForm.BBL
             };
             return temp;
         }
+
+        public void adduser(string taikhoan, string matkhau)
+        {
+            QLENG db = new QLENG();
+            db.AccountUsers.Add(new accountUser { id = DateTime.Now.ToString(),userName=taikhoan,passwordUser=matkhau });
+            db.SaveChanges();
+        }
+        public bool checkeduser(string taikhoan)
+        {
+            QLENG db=new QLENG();
+            foreach(accountUser i in db.AccountUsers)
+            {
+                if(i.userName==taikhoan)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+       
+        public bool checkuser(string taikhoan, string matkhau)
+        {
+            foreach (accountUser i in BBLQL.Instance.listallusers())
+            {
+                if (i.userName == taikhoan && i.passwordUser == matkhau)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public List<accountUser> listallusers()
+        {
+            List<accountUser> list = new List<accountUser>();
+            QLENG db=new QLENG();
+            foreach(accountUser i in db.AccountUsers)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
+        public void adduser(string iduser,string firstName,string lastName,string gender,string email,DateTime sinhnhat,string roleUser,string urlAvatar)
+        {
+            QLENG db = new QLENG();
+            db.Inforusers.Add(new inforuser
+            {
+                id=iduser,
+                firstName=firstName,
+                lastName=lastName,
+                gender=gender,
+                email=email,
+                sinhnhat=sinhnhat,
+                roleUser=roleUser,
+                urlAvatar=urlAvatar,
+            }) ;
+            db.SaveChanges();
+        }
+
         //game doan hinh
         public Image ConvertByteArrayToImage(byte[] data)
         {
@@ -202,7 +260,56 @@ namespace LoginForm.BBL
             db.SaveChanges();
 
         }
+
+        //trie
+        
+
         //thong ke
 
+        public double thongkediem()
+        {
+            QLENG db = new QLENG();
+            return 6.3;
+            
+        }
+        public void addKhoaHocDaHoc(string iduser,string idkhoahoc)
+        {
+            QLENG db = new QLENG();
+            db.Khoadahocs.Add(new khoadahoc { id = iduser + Convert.ToString(DateTime.Now),iduser=iduser,idkhoahoc=idkhoahoc });
+            db.SaveChanges();
+        }
+        public List<khoadahoc> ShowKhoaDaHoc(string query)
+        {
+            QLENG db = new QLENG();
+            List<khoadahoc> list = new List<khoadahoc>();
+            foreach(khoadahoc i in db.Khoadahocs)
+            {
+               
+            }
+            return list; 
+        }
+        public List<String> recommendlist(string goiy)
+        {
+            List<String> list = new List<String>();
+            
+            return list;
+        }
+        public List<int> searchparagraph(string paragraph,string par,trietree tree)
+        {
+            List<int> list = new List<int>();
+            Console.WriteLine("vl");            
+            list=tree.search_tree(par);
+            return list;
+        }
+        public string addParagraphGUI(string id)
+        {
+            QLENG db = new QLENG();
+            videotrochoi vdtc=db.Videotrochois.Find(id);
+            return vdtc.video.transcript;
+         }
+        //public List<int> searchstring(string paragrapth)
+       // {
+
+        //}
     }
 }

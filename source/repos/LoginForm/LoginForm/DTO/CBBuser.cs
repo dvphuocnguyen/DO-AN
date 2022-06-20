@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LoginForm.DTO
 {
-    public class Avatar
+    public class CBBuser
     {
-        [Key]
-        public string id;
-        public string url;
+     public string roleUser { get; set; }
+        public override string ToString()
+        {
+            return roleUser;
+        }
     }
 }

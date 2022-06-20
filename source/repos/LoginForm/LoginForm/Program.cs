@@ -16,7 +16,9 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form4());
+            /*Application.Run(new KhoaHoc());*/
+            Application.Run(new mediaplayer("6/20/2022 9:34:43 AM"));
+            /* Application.Run(new Form5());*/
         }
     }
 }

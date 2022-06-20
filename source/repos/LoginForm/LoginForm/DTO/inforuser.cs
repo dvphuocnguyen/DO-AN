@@ -10,10 +10,7 @@ namespace LoginForm.DTO
 {
     public class inforuser
     {
-        public inforuser()
-        {
-            this.user = new accountUser();
-        }
+      
         [Key]
         public string id { get; set; }
         public string firstName { get; set; }
@@ -23,9 +20,8 @@ namespace LoginForm.DTO
         public DateTime sinhnhat { get; set; }
         public string roleUser { get; set; }
 
-        public string IdAnh { get; set; }
-        [ForeignKey("IdAnh")]
-        public virtual Avatar avatar { get; set; }
+        public string urlAvatar { get; set; }
+
         [ForeignKey("id")]
         public virtual accountUser user { get; set; }
     }
