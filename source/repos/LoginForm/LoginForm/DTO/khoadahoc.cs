@@ -10,11 +10,7 @@ namespace LoginForm.DTO
 {
     public class khoadahoc
     {
-        public khoadahoc()
-        {
-            this.Khoahoc = new khoahoc();
-            this.InfoUser = new inforuser();
-        }
+        
         [Key]
         public string id { get; set; }
         public string idkhoahoc { get; set; }

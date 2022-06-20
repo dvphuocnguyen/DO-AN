@@ -23,6 +23,12 @@ namespace LoginForm
         public virtual DbSet<video> Videos { get; set; }
 
         public virtual DbSet<videotrochoi> Videotrochois { get; set; }
+
+        public virtual DbSet<khoadahoc> Khoadahocs { get; set; }
+
+        public virtual DbSet<inforuser> Inforusers { get; set; }
+
+        public virtual DbSet<accountUser> AccountUsers { get; set; }
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
