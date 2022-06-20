@@ -39,7 +39,6 @@ namespace LoginForm
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -57,10 +56,15 @@ namespace LoginForm
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +77,7 @@ namespace LoginForm
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(916, 462);
+            this.tabControl1.Size = new System.Drawing.Size(1242, 462);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -89,7 +93,7 @@ namespace LoginForm
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(908, 433);
+            this.tabPage1.Size = new System.Drawing.Size(1234, 433);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "User List";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,6 +168,8 @@ namespace LoginForm
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button5);
@@ -186,21 +192,10 @@ namespace LoginForm
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(908, 433);
+            this.tabPage2.Size = new System.Drawing.Size(1234, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "User Detail";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LoginForm.Properties.Resources.blue_alpha_d_greek_letter_illustration_isolated_white_background_1902152093;
-            this.pictureBox1.Location = new System.Drawing.Point(748, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // button6
             // 
@@ -221,11 +216,12 @@ namespace LoginForm
             this.button5.TabIndex = 15;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(674, 250);
+            this.comboBox1.Location = new System.Drawing.Point(332, 186);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(176, 24);
@@ -234,7 +230,7 @@ namespace LoginForm
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(364, 249);
+            this.dateTimePicker1.Location = new System.Drawing.Point(328, 44);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(192, 22);
@@ -242,7 +238,7 @@ namespace LoginForm
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(38, 252);
+            this.textBox5.Location = new System.Drawing.Point(35, 249);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(195, 22);
@@ -251,7 +247,7 @@ namespace LoginForm
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(792, 162);
+            this.radioButton2.Location = new System.Drawing.Point(407, 122);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 20);
@@ -263,7 +259,7 @@ namespace LoginForm
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(674, 161);
+            this.radioButton1.Location = new System.Drawing.Point(332, 122);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(58, 20);
@@ -274,7 +270,7 @@ namespace LoginForm
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(364, 159);
+            this.textBox4.Location = new System.Drawing.Point(38, 186);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(192, 22);
@@ -282,7 +278,7 @@ namespace LoginForm
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(38, 161);
+            this.textBox3.Location = new System.Drawing.Point(38, 120);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(195, 22);
@@ -290,7 +286,7 @@ namespace LoginForm
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(38, 58);
+            this.textBox2.Location = new System.Drawing.Point(35, 44);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(195, 22);
@@ -299,7 +295,7 @@ namespace LoginForm
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(670, 205);
+            this.label8.Location = new System.Drawing.Point(329, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 16);
             this.label8.TabIndex = 6;
@@ -308,7 +304,7 @@ namespace LoginForm
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(360, 205);
+            this.label7.Location = new System.Drawing.Point(325, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 5;
@@ -317,7 +313,7 @@ namespace LoginForm
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 205);
+            this.label6.Location = new System.Drawing.Point(32, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 4;
@@ -326,7 +322,7 @@ namespace LoginForm
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(670, 118);
+            this.label5.Location = new System.Drawing.Point(329, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 3;
@@ -335,7 +331,7 @@ namespace LoginForm
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(360, 118);
+            this.label4.Location = new System.Drawing.Point(35, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 2;
@@ -344,7 +340,7 @@ namespace LoginForm
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 118);
+            this.label3.Location = new System.Drawing.Point(35, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 1;
@@ -359,24 +355,57 @@ namespace LoginForm
             this.label2.TabIndex = 0;
             this.label2.Text = "ID";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(591, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(287, 184);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LoginForm.Properties.Resources.blue_alpha_d_greek_letter_illustration_isolated_white_background_1902152093;
+            this.pictureBox1.Location = new System.Drawing.Point(1055, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(649, 231);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(139, 45);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Choose avatar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(916, 462);
+            this.ClientSize = new System.Drawing.Size(1242, 462);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
             this.Text = "Admin";
-            
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -412,5 +441,8 @@ namespace LoginForm
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

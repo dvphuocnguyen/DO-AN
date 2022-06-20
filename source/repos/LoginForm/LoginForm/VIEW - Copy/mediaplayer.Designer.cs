@@ -41,6 +41,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -93,10 +96,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 528);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 561);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1284, 294);
+            this.tabControl1.Size = new System.Drawing.Size(1284, 261);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -105,16 +109,16 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1276, 265);
+            this.tabPage1.Size = new System.Drawing.Size(1276, 232);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Script";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 7);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 31);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1262, 302);
+            this.richTextBox1.Size = new System.Drawing.Size(1262, 183);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.MouseLeave += new System.EventHandler(this.richTextBox1_MouseLeave);
@@ -125,7 +129,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1276, 265);
+            this.tabPage2.Size = new System.Drawing.Size(1276, 232);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quiz";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -142,7 +146,7 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(6, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1239, 239);
+            this.groupBox1.Size = new System.Drawing.Size(1239, 206);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -157,11 +161,40 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1276, 369);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(359, 533);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(148, 22);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // Search
+            // 
+            this.Search.AutoSize = true;
+            this.Search.Location = new System.Drawing.Point(271, 533);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(50, 16);
+            this.Search.TabIndex = 10;
+            this.Search.Text = "Search";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1276, 232);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Comment";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // mediaplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 858);
+            this.ClientSize = new System.Drawing.Size(1322, 857);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -194,5 +227,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label Search;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
